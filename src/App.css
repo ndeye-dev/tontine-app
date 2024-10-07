@@ -1,9 +1,37 @@
 .img{
-  border: 2px solid #072c39;
-  background-color: #072c39;
+  border: 2px solid #083b4e;
+  background-color: #083b4e;
+  padding: 7rem;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+.imgg{
+  border: 2px solid #083b4e;
+  background-color: #083b4e;
+  padding: 3rem;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
 }
 .fond{
-  background-color: #072c39;
+  background-color: #083b4e;
+  margin-left: 11rem;
+
+}
+.texte{
+  color: #083b4e;
+  text-align: center;
+}
+
+label{
+  font-weight: bold;
+}
+@media screen and (max-width: 440px) {
+  .fond {
+    margin: 0;
+  }
+  .texte{
+    text-align: start;
+  }
 }
 
 

@@ -3,19 +3,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import Inscription from "./composants/inscription";
 import Connexion from './composants/connexion';
+import Accueil from './composants/accueil';
+
 
 class App extends React.Component {
   render() {
     return (
       // <div>
-        
       //   <Connexion />
       // </div>
       <div>
         <Routes>
-        <Route path="/inscription" element={<Inscription />} />
+        <Route path="/" element={<Inscription />} />
         <Route path="/connexion" element={<Connexion />} />
-          
+        <Route path="/accueil" element={<Accueil />} />
+
         </Routes>
       </div>
     )

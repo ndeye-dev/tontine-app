@@ -3,8 +3,32 @@ import { Link } from 'react-router-dom';
 import Images from '../assets/remv2.png'
 
 class Inscription extends React.Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //       firstname: '',
+    //       lastname: '',
+    //       date: '',
+    //       profession: '',
+    //       password:'',
+    //       confirme: '',
+    //       mail: '',
+    //       phone: '',
+    //       adress: '',
+    //       organisation: ''
+    //     };
+    //   }
+    //   handleChange = (event) => {
+    //     this.setState({ [event.target.name]: event.target.value });
+    //   };
+    //   handleSubmit = (event) => {
+    //        event.preventDefault();
+    //        console.log('Connexion:', this.state);
+    //      };
+
     render() {
         return (
+    
             <div className="container">
                 
                 <div className="row mt-5">
@@ -39,7 +63,7 @@ class Inscription extends React.Component {
 
                             <div  class="form-outline datepicker w-100">
                             <label for="birthdayDate" class="form-label">Date de naissance</label>
-                                <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                                <input type="date" class="form-control form-control-lg" id="birthdayDate" />
                             </div>
 
                         </div>
@@ -51,12 +75,12 @@ class Inscription extends React.Component {
 
                         </div>
                     </div>
-<div class="row">
+                        <div class="row">
                         <div class="col-md-6 mb-2">
 
                             <div  >
                             <label class="form-label" for="motdepass">Definir mot de passe</label>
-                                <input type="text" id="motdepass" class="form-control form-control-lg" />
+                                <input type="password" id="motdepass" class="form-control form-control-lg" />
                                 
                             </div>
 
@@ -64,7 +88,7 @@ class Inscription extends React.Component {
                         <div class="col-md-6 mb-2">
                             <div  >
                             <label class="form-label" for="confirm">Confirmer votre mot de pass</label>
-                                <input type="text" id="confirm" class="form-control form-control-lg" />
+                                <input type="password" id="confirm" class="form-control form-control-lg" />
                             </div>
 
                         </div>

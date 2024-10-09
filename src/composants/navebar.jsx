@@ -1,37 +1,37 @@
 
-// import React from "react";
+import React from "react";
+import Profil from '../assets/person.png'
 
-// class Navebar extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-//   <div class="container-fluid">
-//     <a class="navbar-brand" href="#">Navbar w/ text</a>
-//     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-//       <span class="navbar-toggler-icon"></span>
-//     </button>
-//     <div class="collapse navbar-collapse" id="navbarText">
-//       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-//         <li class="nav-item">
-//           <a class="nav-link active" aria-current="page" href="#">Home</a>
-//         </li>
-//         <li class="nav-item">
-//           <a class="nav-link" href="#">Features</a>
-//         </li>
-//         <li class="nav-item">
-//           <a class="nav-link" href="#">Pricing</a>
-//         </li>
-//       </ul>
-//       <span class="navbar-text">
-//         Navbar text with an inline element
-//       </span>
-//     </div>
-//   </div>
-// </nav>
-//       </div>
-//     )
-//   }
-// }
+class Navebar extends React.Component {
+    render() {
+        return (
+            <div>
+                <nav className="d-flex bg-white shadow p-2 justify-content-between ">
+                    <div>
+                        <h5 className="fw-bold">Admin Dasbord</h5>
+                    </div>
+                    <div className="d-flex margin gap-2">
+                        <i class="bi bi-bell fs-5 fw-bold"></i>
+                        <img src={Profil} alt="person" className=" imagee"/>
+                        <div>
+                        <h5>Ndiaga SALL </h5>
+                        <span>Administrator</span>
+                        </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button class="dropdown-item" type="button">Action</button></li>
+                            <li><button class="dropdown-item" type="button">Another action</button></li>
+                            <li><button class="dropdown-item" type="button">Something else here</button></li>
+                        </ul>
+                    </div>
+                    </div>
+                </nav>
+                
+            </div>
+        )
+    }
+}
 
-// export default Navebar
+export default Navebar

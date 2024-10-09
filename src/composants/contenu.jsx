@@ -1,15 +1,17 @@
-// import React from "react";
-// import Navebar from './composants/navebar.jsx';
+import React from "react";
+import Dashbord from "./dashbord";
 
-// class Contenu extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <main>
-//             <Navebar />
-//         </main>
-//       </div>
-//     )
-//   }
-// }
-// export default Contenu
+
+class Contenu extends React.Component {
+  render() {
+    return (
+      <div>
+        <main>
+        <Dashbord />    
+        
+        </main>
+      </div>
+    )
+  }
+}
+export default Contenu

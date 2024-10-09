@@ -29,16 +29,16 @@ class Inscription extends React.Component {
     render() {
         return (
     
-            <div className="container">
+            <div className="container-fluid">
                 
-                <div className="row mt-5">
-                <div className="col-lg-4">
-                    <img src={Images} alt="" className="imgg"/>
+                <div className="row">
+                <div className="col-lg-4 imgg">
+                    <img src={Images} alt="" className=""/>
                 </div>
                 <div className="col-lg-8">
                 <form>
 
-                    <div class="row">
+                    <div class="row ">
                     <h1 className="texte">Inscription</h1>
                         <div class="col-md-6 mb-2">
 

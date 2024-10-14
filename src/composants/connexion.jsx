@@ -68,7 +68,7 @@ class Formulaire extends React.Component {
     }
     this.setState({ errorMessage: '' });
     // Rediriger vers la page d'accueil (ou autre action)
-    this.props.history.push('/accueil');  };
+ };
 
   render() {
     return (
@@ -153,7 +153,7 @@ class Connexion extends React.Component {
             </div>
             <div className="col-lg-8 mt-5  texte">
               <Titre text="Bienvenue sur Bakeli-tontine" />
-              <Formulaire /> {/* Pass the history prop */}
+              <Formulaire />
             </div>
           </div>
         </div>

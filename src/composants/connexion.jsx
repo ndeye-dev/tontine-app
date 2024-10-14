@@ -39,18 +39,9 @@ class Formulaire extends React.Component {
       motdepass: ''
     };
   }
-  // handleChange = (event) => {
-  //   this.setState({ [event.target.name]: event.target.value });
-  // };
-  // handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   console.log('Connexion:', this.state);
-  // };
-
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
   };
-
   handleSubmit = (e) => {
     e.preventDefault();
     const { username, password } = this.state;
@@ -68,7 +59,7 @@ class Formulaire extends React.Component {
     }
     this.setState({ errorMessage: '' });
     // Rediriger vers la page d'accueil (ou autre action)
- };
+    this.props.history.push('/accueil');  };
 
   render() {
     return (

@@ -7,14 +7,14 @@ class Sidebar extends React.Component {
         return (
             <div>
                 <button
-                    className="btn btn-toggle d-md-none" // Afficher uniquement sur mobile
+                    className="btn btn-toggle d-md-none" 
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#sidebarContent"
                     aria-expanded="false"
                     aria-controls="sidebarContent"
                 >
-                    <i className="bi bi-list"></i> {/* Icône hamburger */}
+                    <i className="bi bi-list"></i> 
                 </button>
 
                 <div className="sidebar bag collapse d-md-block" id="sidebarContent">
@@ -48,7 +48,7 @@ class Sidebar extends React.Component {
                             <ul className="dropdown-menu dropdown-menu-end">        
                             <Link to="/parametre"><li><button className="dropdown-item" type="button">Parametres Generaux</button></li>
                                 </Link> 
-                                <Link><li><button className="dropdown-item" type="button">Utisateur</button></li></Link>
+                                <Link><li><button className="dropdown-item" type="button">Utisateurs</button></li></Link>
                                 <li><button className="dropdown-item" type="button">Archives</button></li>
                                 <li><button className="dropdown-item" type="button">Membres Bloques</button></li>
                             </ul>

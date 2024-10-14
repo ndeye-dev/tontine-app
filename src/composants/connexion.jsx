@@ -66,7 +66,6 @@ class Formulaire extends React.Component {
       this.setState({ errorMessage: "Veuillez entrer un numéro de téléphone valide." });
       return;
     }
-
     this.setState({ errorMessage: '' });
     // Rediriger vers la page d'accueil (ou autre action)
     this.props.history.push('/accueil');  };

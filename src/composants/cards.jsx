@@ -16,17 +16,15 @@ const cardStyle = {
           ]
         };
       }
-      
       render() {
         return (
-          <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+          <div className="flx" style={{ display: 'flex', justifyContent: 'space-between'}}>
             {this.state.cards.map((card, index) => (
               <div key={index} className="shadow w-75" style={cardStyle}>
                 <p>{card.title}</p>
                 <h6>{card.content1}</h6>
                 <p>{card.content2}</p>
               </div>
-              
             ))}
           </div>
 

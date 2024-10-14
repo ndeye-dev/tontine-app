@@ -47,43 +47,99 @@ class Formulaire extends React.Component {
     console.log('Connexion:', this.state);
   };
 
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { username, password } = this.state;
+
+    // Validation
+    if (!username || !password) {
+      this.setState({ errorMessage: "Tous les champs doivent être remplis." });
+      return;
+    }
+
+    const phonePattern = /^[0-9]{10}$/; 
+    if (!phonePattern.test(username)) {
+      this.setState({ errorMessage: "Veuillez entrer un numéro de téléphone valide." });
+      return;
+    }
+
+    this.setState({ errorMessage: '' });
+    // Rediriger vers la page d'accueil (ou autre action)
+    this.props.history.push('/accueil');  };
+
   render() {
     return (
       <div>
         <h3 className="texte pb-2">Connectez-vous</h3>
-        <p className="texte pb-2">Connectez-vous et gerez vos cotisations</p>
+        <p className="texte pb-2">Connectez-vous et gérez vos cotisations</p>
+        {this.state.errorMessage && <p className="error">{this.state.errorMessage}</p>}
         <form onSubmit={this.handleSubmit}>
           <div className="mb-3 pb-2">
             <input
               type="text"
               name="username"
-              placeholder="N* telephone"
+              placeholder="N° téléphone"
               value={this.state.username}
               onChange={this.handleChange}
               required
               className="form-control fond w-50"
             />
- 
           </div>
           <div className="mb-3 pb-2">
             <input
               type="password"
               name="password"
-              placeholder="Mot de pass"
+              placeholder="Mot de passe"
               value={this.state.password}
               onChange={this.handleChange}
               required
-              className="form-control fond w-50 text-white"
+              className="form-control fond w-50 "
             />
-
           </div>
           <p className="texte">Mot de passe oublié ?</p>
-          <Link to="/accueil">
-            <button type="submit" className="btn btn-success w-50">Connexion</button>
-          </Link>
-          <p className="texte pt-3">Vous n'avez pas de compte  <Link to="/inscription">inscrivez-vous</Link> </p>
+          <Link to="/accueil"><button type="submit" className="btn btn-success w-50">Connexion</button></Link>
+          <p className="texte pt-3">Vous n'avez pas de compte ? <Link to="/inscription">Inscrivez-vous</Link></p>
         </form>
       </div>
+      // <div>
+      //   <h3 className="texte pb-2">Connectez-vous</h3>
+      //   <p className="texte pb-2">Connectez-vous et gerez vos cotisations</p>
+      //   <form onSubmit={this.handleSubmit}>
+      //     <div className="mb-3 pb-2">
+      //       <input
+      //         type="text"
+      //         name="username"
+      //         placeholder="N* telephone"
+      //         value={this.state.username}
+      //         onChange={this.handleChange}
+      //         required
+      //         className="form-control fond w-50"
+      //       />
+ 
+      //     </div>
+      //     <div className="mb-3 pb-2">
+      //       <input
+      //         type="password"
+      //         name="password"
+      //         placeholder="Mot de pass"
+      //         value={this.state.password}
+      //         onChange={this.handleChange}
+      //         required
+      //         className="form-control fond w-50 text-white"
+      //       />
+
+      //     </div>
+      //     <p className="texte">Mot de passe oublié ?</p>
+      //     <Link to="/accueil">
+      //       <button type="submit" className="btn btn-success w-50">Connexion</button>
+      //     </Link>
+      //     <p className="texte pt-3">Vous n'avez pas de compte  <Link to="/inscription">inscrivez-vous</Link> </p>
+      //   </form>
+      // </div>
     )
   }
 }
@@ -98,7 +154,7 @@ class Connexion extends React.Component {
             </div>
             <div className="col-lg-8 mt-5  texte">
               <Titre text="Bienvenue sur Bakeli-tontine" />
-              <Formulaire />
+              <Formulaire /> {/* Pass the history prop */}
             </div>
           </div>
         </div>
@@ -106,5 +162,4 @@ class Connexion extends React.Component {
     )
   }
 }
-
 export default Connexion

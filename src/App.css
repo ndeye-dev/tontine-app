@@ -16,6 +16,16 @@
 ul{
   list-style: none ;
 }
+.prof{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: gainsboro;
+  border: 1px solid #10ef66;
+}
+.buttonp{
+  background-color: #083b4e;
+}
 .imagee{
   width: 45px;
   height: 45px;
@@ -97,6 +107,11 @@ label{
       left: 0;
       height: 100%;
       z-index: 1000;
+  }
+  .flx{
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
   }
 }
 

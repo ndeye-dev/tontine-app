@@ -15,7 +15,7 @@ class App extends React.Component {
 
       <div>
         <Routes>
-        <Route path="/" element={<Inscription />} />
+        <Route path="/inscription" element={<Inscription />} />
         <Route path="/connexion" element={<Connexion />} />
         <Route path="/accueil" element={<Accueil />} />
         <Route path="/utilisateur" element={<Utilisateur />}/>

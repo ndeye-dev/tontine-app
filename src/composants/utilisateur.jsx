@@ -7,7 +7,7 @@ const cardCSS = {
     padding: '10px',
     margin: '16px',
   };
-  const { title = 'Utilisateur' } = this.props;
+//   const { title = 'Utilisa teur' } = this.props;
  class Cardsutilisateur extends React.Component {
     constructor(props) {
         super(props);

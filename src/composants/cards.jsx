@@ -9,7 +9,7 @@ const cardStyle = {
     constructor(props) {
         super(props);
         this.state = {
-          cards: props.cards || [
+          cards: [
             { title: "Juin", content1: "225.000 FCFA", content2: "Nombre de cotisation : 27" },
             { title: "Mai", content1: "100.000 FCFA",  content2: "Nombre de cotisation: 23" },
             { title: "Caisse", content1: "3.500.000 FCFA / 5.000.000 FCFA",  content2: "Content for card 1" }

@@ -1,5 +1,7 @@
 import React from "react";
 import Cards from "./cards";
+import Ligne from "../chartjs/line";
+import Rond from "../chartjs/doughnut";
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -7,21 +9,19 @@ class Dashboard extends React.Component {
     this.state = {
       tab1: [
         { id: 1, title: "Selena Boy", description1: "25.000 FCFA", description2: "01-06-2022", description3: "valide" },
-        { id: 2, title: "Emma Watson", description1: "25.000 FCFA", description2: "01-06-2022", description3: "En attente"},
+        { id: 2, title: "Emma Watson", description1: "25.000 FCFA", description2: "01-06-2022", description3: "En attente" },
         { id: 3, title: "Jhon Robert", description1: "25.000 FCFA", description2: "01-06-2022", description3: "Valide" },
         { id: 4, title: "Anne Hathaway", description1: "25.000 FCFA", description2: "01-06-2022", description3: "En attente" },
         { id: 5, title: "Ravi Shankar", description1: "25.000 FCFA", description2: "01-06-2022", description3: "Valide" },
         { id: 6, title: "Emma Stone", description1: "25.000 FCFA", description2: "01-06-2022", description3: "Valide" }
-
       ],
       tab2: [
-        { id: 1, titre: "Selena Boy", ligne1: "01-06-2022",  ligne2: '100%'},
-        { id: 3, titre: "Jhon Robert", ligne1: "01-06-2022",  ligne2: '100%' },
-        { id: 6, titre: "Emma Stone",  ligne1: "01-06-2022",   ligne2: '100%'},
-        { id: 2, titre: "Emma Watson", ligne1: "01-06-2022",  ligne2: '100%'},
-        { id: 4, titre: "Anne Hathaway", ligne1: "01-06-2022", ligne2: '100%'},
-        { id: 5, titre: "Ravi Shankar", ligne1: "01-06-2022", ligne2: '100%'}
-
+        { id: 1, titre: "Selena Boy", ligne1: "01-06-2022", ligne2: '100%' },
+        { id: 3, titre: "Jhon Robert", ligne1: "01-06-2022", ligne2: '100%' },
+        { id: 6, titre: "Emma Stone", ligne1: "01-06-2022", ligne2: '100%' },
+        { id: 2, titre: "Emma Watson", ligne1: "01-06-2022", ligne2: '100%' },
+        { id: 4, titre: "Anne Hathaway", ligne1: "01-06-2022", ligne2: '100%' },
+        { id: 5, titre: "Ravi Shankar", ligne1: "01-06-2022", ligne2: '100%' }
       ]
     };
   }
@@ -29,16 +29,24 @@ class Dashboard extends React.Component {
     return (
       <div className="">
         <Cards />
-        <div className="row mt-4 gx-5">
+        <div className="row m-1 mt-4">
+          <div className="col-lg-6">
+            <Ligne />
+          </div>
+          <div className="col-lg-6">
+            <Rond />
+          </div>
+        </div>
+        <div className="row mt-5 gx-5 m-2">
           <div className="col-lg-6 bg-white shadow">
             <h4>Juin</h4>
             <table className="table">
               <thead style={{ backgroundColor: 'green' }}>
                 <tr>
-                  <th style={{ backgroundColor:'#10ef66' }}>Membres</th>
-                  <th style={{ backgroundColor:'#10ef66' }}>Montant</th>
-                  <th style={{ backgroundColor:'#10ef66' }}>Date</th>
-                  <th style={{ backgroundColor:'#10ef66' }}>Statut</th>
+                  <th style={{ backgroundColor: '#10ef66' }}>Membres</th>
+                  <th style={{ backgroundColor: '#10ef66' }}>Montant</th>
+                  <th style={{ backgroundColor: '#10ef66' }}>Date</th>
+                  <th style={{ backgroundColor: '#10ef66' }}>Statut</th>
                 </tr>
               </thead>
               <tbody>
